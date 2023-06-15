@@ -8,9 +8,10 @@ import {
   DropdownItem,
 } from "reactstrap";
 import axios from "axios";
-import "../Css/SideBar.scss";
+// import "../Css/SideBar.scss";
+import '../css/navigationBar.scss'
 
-class navigationBar extends Component {
+class NavigationBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +21,10 @@ class navigationBar extends Component {
   }
 
   componentDidMount() {
-    this.setState({ token: localStorage.getItem("token")});
+    var token = localStorage.getItem("token");
+    if (token !== "undefined") {
+      this.setState({ token: token });
+    }
     // var tok = localStorage.getItem("token");
     // if (tok != null) {
     //   var translator = jwtDecode(tok);
@@ -35,7 +39,7 @@ class navigationBar extends Component {
           <Nav className="ml-auto" navbar>
           <span className="logo">Recipie</span>
               <NavItem>
-                <NavLink href="/ShowAllRecipies">Dashboard</NavLink>
+                <NavLink href="/">Dashboard</NavLink>
               </NavItem>
             {this.state.token != null ? (
               <NavItem>
@@ -49,17 +53,17 @@ class navigationBar extends Component {
               <>
               <div className="NavButtons">
                 <NavItem>
-                  <NavLink href="/SignIn">Sign In</NavLink>
+                  <NavLink href="/Login">Sign In</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/SignUp">Sign Up</NavLink>
+                  <NavLink href="/Register">Sign Up</NavLink>
                 </NavItem>
                 </div>
               </>
             ) : (
               <>
                 <NavItem>
-                  <NavLink href="/SignOut">Sign Out</NavLink>
+                  <NavLink href="/Logout">Sign Out</NavLink>
                 </NavItem>
               </>
             )}
@@ -70,4 +74,4 @@ class navigationBar extends Component {
   }
 }
 
-export default navigationBar;
+export default NavigationBar;

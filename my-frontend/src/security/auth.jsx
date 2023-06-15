@@ -1,10 +1,10 @@
-import CreateRecipie from '../components/createRecipie'
+import CreateRecipie from '../components/CreateRecipie'
 
-function auth(page) {
+function Auth(page) {
     var token = localStorage.getItem("token");
     if (token != null) {
       return CreateRecipie;
     }
     return page;
   }
-  export default auth
+  export default Auth

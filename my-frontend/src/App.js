@@ -1,33 +1,36 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import auth from "./security/Auth";
-import logout from './components/logout'
-import login from "./components/login";
-import register from "./components/register";
-
+import logout from './components/Logout'
+import register from "./components/Register";
+import NavigationBar from "./components/NavigationBar";
+import ShowAllRecipies from "./components/ShowAllRecipies";
+import Login from "./components/Login";
+import Auth from "./security/Auth";
+import CreateRecipie from "./components/CreateRecipie";
 function App() {
   return (
     <div>
       <Router>
-        <SideBar />
+        <NavigationBar />
         <div className="container">
           <Switch>
-            <Route path="/" exact component={showAllRecipies}></Route>
+            <Route path="/" exact component={ShowAllRecipies}></Route>
             <Route
-              path="/SignIn"
+              path="/Login"
               exact
-              component={auth(login)}
+              component={Auth(Login)}
             ></Route>
             <Route
-              path="/SignUp"
+              path="/Register"
               exact
-              component={auth(register)}
+              component={Auth(register)}
             ></Route>
             <Route
               path="/CreateRecipie"
               exact
-              component={auth(createRecipie)}
+              component={Auth(CreateRecipie)}
             ></Route>
-            <Route path="/logout" exact component={logout}></Route>
+            <Route path="/Logout" exact component={logout}></Route>
           </Switch>
         </div>
       </Router>
