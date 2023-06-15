@@ -20,6 +20,7 @@ class register extends Component {
 
     createUser = (hndl) => {
         hndl.preventDefault();
+        //change the route
         axios.post('http://134.209.136.146:8000/register', {
             email: this.state.email,
             username: this.state.username,

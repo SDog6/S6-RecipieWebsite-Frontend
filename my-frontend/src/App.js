@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import auth from "./security/Auth";
+import logout from './components/logout'
+import login from "./components/login";
+import register from "./components/register";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <SideBar />
+        <div className="container">
+          <Switch>
+            <Route path="/" exact component={showAllRecipies}></Route>
+            <Route
+              path="/SignIn"
+              exact
+              component={auth(login)}
+            ></Route>
+            <Route
+              path="/SignUp"
+              exact
+              component={auth(register)}
+            ></Route>
+            <Route
+              path="/CreateRecipie"
+              exact
+              component={auth(createRecipie)}
+            ></Route>
+            <Route path="/logout" exact component={logout}></Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
