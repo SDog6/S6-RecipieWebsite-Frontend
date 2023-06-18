@@ -49,7 +49,7 @@ export default function Login() {
             Login
           </button>
         </form>
-        <p>Doesn't have an account? Register <a href="/SignUp">Here</a></p>
+        <p>Doesn't have an account? Register <a href="/Register">Here</a></p>
         {error && (
           <p className="error">
             {" "}

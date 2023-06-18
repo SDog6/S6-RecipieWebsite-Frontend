@@ -12,20 +12,27 @@ export default function CreateRecipie() {
 
     async function hndlCreateRecipie(e) {
         e.preventDefault()
-        axios.post('http://167.99.18.33:8000/register', {
+        axios.post('http://167.99.18.33:8000/CraeteRecipe', {
             author: author,
             title: title,
             picture: picture,
             description: description,
             ingredients: ingredients,
-            step: step
+            instructions: step
+        }, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`
+            }
         })
             .then(
                 async (response) => {
-                    window.location.href = '/ShowAllRecipies';
+                    alert("Recipe Created!")
+                    window.location.href = '/';
                 }, (error) => {
-                    setError({ errorMessage: "The recipie exist!" });
+                    alert("The recipe exists!")
+                    setError({ errorMessage: "The recipe exists!" });
                 });
+        
     }
     return (
         <>
@@ -47,7 +54,7 @@ export default function CreateRecipie() {
                             onChange={(e) => { setAuthor(e.target.value) }} />
                         <input type="descriptions" placeholder="Descriptions"
                             name="descriptions"
-                            value={picture}
+                            value={description}
                             onChange={(e) => { setDescription(e.target.value) }} />
                         <input type="ingredients" placeholder="Ingredients"
                             name="ingrediets"

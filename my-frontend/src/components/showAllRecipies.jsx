@@ -30,7 +30,9 @@ export default function ShowAllRecipies() {
     window.location.href = '/ShowSingleRecipie';
   }
 
-  if (!data) return <div>Loading...</div>
+  if (!data) return  <div className="catName">
+  <div className="gridContainer">
+    <div className="wrap"> <div>Loading...</div></div></div></div>
 
   const recipies = data.recipies
 
