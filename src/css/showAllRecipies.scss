@@ -27,7 +27,7 @@ img.card-img {
 
 }
 .gridContainer {
-    background-color: #d3ab9e;
+    background-color: #9b743b;
     display:grid;
     grid-template-columns: auto auto !important;
     grid-column-gap: 50px;
@@ -54,4 +54,11 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+  }
+
+  body {
+    background-image: url('../Img/top-close-up-view-vegetables-tomatoes-with-pedicels-garlic-bell-peppers-lemon-oil-onion_140725-72203.avif');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
   }

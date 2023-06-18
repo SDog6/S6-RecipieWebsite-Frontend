@@ -1,6 +1,6 @@
 .fromContainer {
-    background-color: #e8dacc;
-    height: 100vh;
+  background-image: url('../Img/top-close-up-view-vegetables-tomatoes-with-pedicels-garlic-bell-peppers-lemon-oil-onion_140725-72203.avif');
+  height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +15,8 @@
       align-items: center;
       }
       .title {
-        color: #d3ab9e;
-        font-size: 12px;
+        color: #917a14;
+        font-size: 20px;
       }
       form {
         display: flex;
@@ -27,14 +27,14 @@
           padding: 15px;
           border: none;
           width: 250px;
-          border-bottom: 1px solid #e8dacc;
+          border-bottom: 1px solid #c1ab4b;
           border-radius: 10px;
           &::placeholder {
             color: rgb(175, 175, 175);
           }
         }
         button {
-          background-color: #e8dacc;
+          background-color: #c1ab4b;
           color: white;
           padding: 10px;
           font-weight: bold;
@@ -44,8 +44,15 @@
         }
       }
       p {
-        color: #5d5b8d;
+        color: #8e0f0f;
         font-size: 12px;
         margin-top: 10px;
       }
+    }
+
+    body {
+      background-image: url('../Img/top-close-up-view-vegetables-tomatoes-with-pedicels-garlic-bell-peppers-lemon-oil-onion_140725-72203.avif');
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
