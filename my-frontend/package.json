@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@playwright/test": "^1.35.0",
+    "@playwright/test": "^1.35.1",
     "sass": "^1.62.1"
   },
   "vercel": {
