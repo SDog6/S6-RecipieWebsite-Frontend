@@ -26,9 +26,8 @@ export default function ShowAllRecipies() {
   }, [])
 
   function openRecipie(id){
-    localStorage.clear();
-    localStorage.setItem(id);
-    window.location.href = './ShowRecipie';
+    localStorage.setItem("id",id);
+    window.location.href = '/ShowSingleRecipie';
   }
 
   if (!data) return <div>Loading...</div>

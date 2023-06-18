@@ -46,7 +46,7 @@
   "vercel": {
     "build": {
       "env": {
-        "API_KEY": "prj_QHheuSe3KArXepI7YAihiD7PLlA0"
+        "API_KEY": "prj_5aFiLjrbpAh7GNTMnncFK1ycNmX0"
       }
     },
     "routes": [
